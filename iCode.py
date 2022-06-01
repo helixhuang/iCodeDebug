@@ -28,12 +28,6 @@ for i in range(20):
 #########################################################
 
 #################### 此区域用于实际代码 ###################
-for i in range(4):
-    for o in range(3):
-        Dev.step(2)
-        Dev.turnLeft()
-    Dev.step(6)
-    while Flyer[i].disappear():Dev.wait()
-    Dev.step(2)
-
+for i in range(9):
+    Dev.step((i==0)+(i==1)*3-(i==2)-(i==3 or i==6 or i==7)*2+(i==4 or i==8)*2-(i==5)*4)
 #########################################################
